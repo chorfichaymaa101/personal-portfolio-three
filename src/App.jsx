@@ -27,7 +27,7 @@ const App = () => {
         <About language={language} />
         <Education language={language} />
         <Experience language={language} />
-        <Tech language={language} />
+        <Tech language={language} className="mt-[200px]" />
 
         <Works language={language} />
         <div className="relative z-0">

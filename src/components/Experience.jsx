@@ -16,7 +16,7 @@ const experiencesText = {
     {
       title: "Mobile Developer Intern – Final Project",
       company_name: "Intelcia IT Solutions",
-      icon: intelcia, // replace with your actual icon import
+      icon: intelcia,
       iconBg: "white",
       date: "2024–2025",
       points: [
@@ -28,7 +28,7 @@ const experiencesText = {
        {
       title: "Academic Project – Mobile & Web App Developer",
       company_name: "ENSA Kénitra",
-      icon: ensak, // replace with your actual icon import
+      icon: ensak,
       iconBg: "#E6DEDD",
       date: "2024–2025",
       points: [
@@ -41,22 +41,22 @@ const experiencesText = {
     {
       title: "Web Development Intern – CRM Project",
       company_name: "Société Nationale de Radiodiffusion et de Télévision (SNRT)",
-      icon: snrt, // replace with your actual icon import
+      icon: snrt,
       iconBg: "white",
       date: "2023–2024",
       points: [
-        "Designed and developed a complete web CRM application, managing contacts, appointments, and complaints using Laravel (backend) and React (frontend).",
+        "Designed and developed a complete web CRM application, managing contacts, appointments, and complaints using Java (backend) and React (frontend).",
         "Implemented detailed performance reports and a secure interface for effective tracking and better decision-making."
       ],
     },
     {
       title: "Web Development Intern",
       company_name: "Office National de l’Électricité et de l’Eau Potable (ONEE)",
-      icon: onep, // replace with your actual icon import
+      icon: onep,
       iconBg: "#000000ff",
       date: "2022–2023",
       points: [
-        "Developed a web application in PHP, JavaScript, HTML, and CSS for internal communication and support request management.",
+        "Developed a web application in Java Spring Boot, React, HTML, and CSS for internal communication and support request management.",
         "The site is operational and used by the organization to improve internal management."
       ],
     },
@@ -95,7 +95,7 @@ const experiencesText = {
       iconBg: "white",
       date: "2023–2024",
       points: [
-        "Conception et développement d’une application CRM web complète, incluant la gestion des contacts, rendez-vous et réclamations, avec Laravel pour le backend et React pour le frontend.",
+        "Conception et développement d’une application CRM web complète, incluant la gestion des contacts, rendez-vous et réclamations, avec Java pour le backend et React pour le frontend.",
         "Mise en place de rapports de performance détaillés et d’une interface sécurisée pour un suivi efficace et une meilleure prise de décision."
       ],
     },
@@ -106,7 +106,7 @@ const experiencesText = {
       iconBg: "#000000ff",
       date: "2022–2023",
       points: [
-        "Conception et développement d’un site web en PHP, JavaScript, HTML et CSS pour gérer les communications internes et les demandes d’assistance des employés.",
+        "Conception et développement d’un site web en Java Spring Boot, React, HTML et CSS pour gérer les communications internes et les demandes d’assistance des employés.",
         "Le site est aujourd’hui opérationnel et utilisé par l’organisation pour améliorer la gestion interne."
       ],
     },
@@ -115,7 +115,7 @@ const experiencesText = {
 };
 
 
-// Experience card component
+
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{ background: "#1d1836", color: "#fff" }}
@@ -144,7 +144,7 @@ const ExperienceCard = ({ experience }) => (
   </VerticalTimelineElement>
 );
 
-// Main Experience section
+
 const Experience = ({ language = "en" }) => {
   const experiences = experiencesText[language];
 

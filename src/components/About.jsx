@@ -38,7 +38,7 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = ({ language = "en" }) => {
-  // Text content based on language
+
   const aboutText = {
     en: "I'm a Full-Stack Engineer with strong expertise in PHP, Java, Laravel, React, Angular, and Flutter. Passionate about creating innovative web and mobile applications, I focus on building scalable, secure, and user-friendly solutions that deliver real impact.",
     fr: "Je suis une ingénieure Full-Stack avec une solide expertise en PHP, Java, Laravel, React, Angular et Flutter. Passionnée par le développement d’applications web et mobiles innovantes, je conçois des solutions évolutives, sécurisées et conviviales qui apportent un réel impact."
@@ -59,10 +59,19 @@ const About = ({ language = "en" }) => {
     ],
   };
 
-  const services = servicesText[language]; // ✅ now no shadowing
+  const services = servicesText[language];
 
   return (
     <>
+      <motion.div variants={textVariant()}>
+      <p className={styles.sectionSubText}>
+        {language === "en" ? "Who I Am" : "Qui je suis"}
+      </p>
+      <h2 className={styles.sectionHeadText}>
+        {language === "en" ? "About Me" : "À propos de moi"}
+      </h2>
+    </motion.div>
+
       <motion.div variants={textVariant()}></motion.div>
 
       <motion.p

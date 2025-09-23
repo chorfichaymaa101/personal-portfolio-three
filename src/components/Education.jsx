@@ -38,7 +38,7 @@ const educationText = {
        {
       title: "Mohamed Ibn Elhassan Elouazzani High School",
       institution: "High School ",
-      icon: highschool, // replace with a suitable icon
+      icon: highschool,
       iconBg: "#554729ff",
       date: "2019–2020",
       points: [
@@ -86,7 +86,7 @@ const educationText = {
 
 
 
-// Experience card component
+
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{ background: "#1d1836", color: "#fff" }}
@@ -115,7 +115,7 @@ const ExperienceCard = ({ experience }) => (
   </VerticalTimelineElement>
 );
 
-// Main Experience section
+
 const Education = ({ language = "en" }) => {
   const educations = educationText[language];
 

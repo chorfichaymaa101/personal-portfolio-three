@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import computerScreenshot from "../assets/computer.png";
 
 
 
@@ -35,19 +36,32 @@ const Hero = ({ language }) => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`} style={{"font-size": "50px"}}>
-           {greeting} <span className="text-[#5573e0]">{name}</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`} style={{"font-size": "25px"}}>
-               {description.split("\n").map((line, index) => (
-              <span key={index}>
-                {line} <br className='sm:block hidden' />  </span>
-        ))}
-          </p>
+   <h1 className={`${styles.heroHeadText} text-white text-2xl sm:text-[38px] lg:text-[38px] xl:text-[40px] 2xl:text-[40px] leading-[3rem]`}>
+  {greeting} <span className="text-[#5573e0]">{name}</span>
+</h1>
+
+        <p className={`${styles.heroSubText} mt-2 sm:mt-4 lg:mt-2 xl:mt-2 2xl:mt-2 text-white-100 text-[20px] sm:text-[23px]`}>
+          {description.split("\n").map((line, index) => (
+            <span key={index}>
+              {line} <br className='sm:block hidden' />  
+            </span>
+          ))}
+        </p>
+
         </div>
       </div>
 
-      <ComputersCanvas />
+<div className="flex justify-center items-center px-4 mt-10">
+  <img
+    src={computerScreenshot}
+    alt="Computer screenshot"
+    className="w-full max-w-7xl sm:max-w-8txl h-[400px] sm:h-[600px] object-contain mt-[250px]"
+  />
+</div>
+
+
+
+
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>

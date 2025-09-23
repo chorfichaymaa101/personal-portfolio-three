@@ -6,7 +6,7 @@ import { github, tripguide } from '../assets';
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from '../utils/motion';
-
+import bookstore from '../assets/bookstore.png';
 import { jobit, portfolio} from "../assets";
 import { Tilt } from "react-tilt";
 
@@ -21,14 +21,14 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
       }} className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full" style={{"background": "#151030"}} >
         <div className="relative w-full h-[230px]" style={{"background": "#151030", "border-radius": "14px"}}>
           <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl " />
-          {/* <div className="absolute inset-0 flex justify-end m-3 card-img_hover ">
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover ">
            <div onClick={() => window.open(
               source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer " >
                 <img src={github} alt="github" className="w-1/2 h-1/2 object-contain " />
               </div>
           </div>
-          */}
+          
         </div>
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
@@ -70,12 +70,24 @@ const projectsText = {
       name: "Personal Portfolio",
       description:
         "Developed my personal portfolio website to showcase my skills, projects, and professional experience. Built with React, Tailwind CSS, and modern web development practices, focusing on responsive design and interactive UI elements.",
-      image: portfolio, // replace with a screenshot of your portfolio
-      source_code_link: "#", // placeholder since you don’t have GitHub yet
+      image: portfolio,
+      source_code_link: "#",
       tags: [
         { name: "react", color: "blue-text-gradient" },
         { name: "three js", color: "green-text-gradient" },
         { name: "tailwind css", color: "pink-text-gradient" },
+      ],
+    },
+    {
+      name: "Bookstore App",
+      description:
+        "Built a modern bookstore app using React and Tailwind CSS. Users can browse books by category, add them to a cart, and complete checkout with a delivery form for shipping details. The design is clean, responsive, and offers smooth navigation for a better experience.",
+      image: bookstore,
+      source_code_link: "https://github.com/chorfichaymaa101/bookstore",
+      tags: [
+        { name: "react", color: "blue-text-gradient" },
+        { name: "tailwind css", color: "pink-text-gradient" },
+        { name: "react router", color: "green-text-gradient" },
       ],
     },
   ],
@@ -85,12 +97,24 @@ const projectsText = {
       name: "Portfolio Personnel",
       description:
         "Développement de mon portfolio personnel pour présenter mes compétences, projets et expériences professionnelles. Réalisé avec React et Tailwind CSS, en mettant l’accent sur le design responsive et les éléments interactifs.",
-      image: portfolio, // replace with a screenshot of your portfolio
-      source_code_link: "#", // placeholder
+      image: portfolio,
+      source_code_link: "#",
       tags: [
         { name: "react", color: "blue-text-gradient" },
         { name: "three js", color: "green-text-gradient" },
         { name: "tailwind css", color: "pink-text-gradient" },
+      ],
+    },
+    {
+      name: "Application Librairie",
+      description:
+        "Application de librairie moderne créée avec React et Tailwind CSS. Les utilisateurs peuvent parcourir les livres par catégories, les ajouter au panier et valider leur commande via un formulaire de livraison. L’interface est claire, responsive et simple à naviguer pour une expérience fluide.",
+      image: bookstore,
+      source_code_link: "https://github.com/chorfichaymaa101/bookstore",
+      tags: [
+        { name: "react", color: "blue-text-gradient" },
+        { name: "tailwind css", color: "pink-text-gradient" },
+        { name: "react router", color: "green-text-gradient" },
       ],
     },
   ],
@@ -99,7 +123,7 @@ const projectsText = {
 
 
   const projects = projectsText[language];
-  const texts = worksText[language];       // new texts for heading & paragraph
+  const texts = worksText[language];
 
   return (
       <>

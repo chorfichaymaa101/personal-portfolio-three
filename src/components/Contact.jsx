@@ -120,6 +120,7 @@ const Contact = ({ language = "en" }) => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">{texts.labels.email}</span>
             <input
+            required
               type="email"
               name="email"
               value={form.email}
@@ -133,6 +134,7 @@ const Contact = ({ language = "en" }) => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">{texts.labels.message}</span>
             <textarea
+            required
               rows="7"
               name="message"
               value={form.message}
