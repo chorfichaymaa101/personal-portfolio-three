@@ -9,27 +9,45 @@ import { fadeIn, textVariant } from '../utils/motion';
 import bookstore from '../assets/bookstore.png';
 import { jobit, portfolio} from "../assets";
 import { Tilt } from "react-tilt";
+import livelink from "../assets/link.png";
 
-const ProjectCard = ({index, name, description, tags, image, source_code_link}) => {
+const ProjectCard = ({index, name, description, tags, image, source_code_link, live_link}) => {
    return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
       options={{
         max: 45,
         scale: 1,
-        speed: 450,
+        speed: 1000,
       }} className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full" style={{"background": "#151030"}} >
         <div className="relative w-full h-[230px]" style={{"background": "#151030", "border-radius": "14px"}}>
           <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl " />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover ">
-           <div onClick={() => window.open(
-              source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer " >
-                <img src={github} alt="github" className="w-1/2 h-1/2 object-contain " />
-              </div>
-          </div>
+          <div className="absolute inset-0 flex justify-end m-3 gap-2 card-img_hover">
+          {/* GitHub Button */}
+          {source_code_link && (
+            <div
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+            >
+              <img src={github} alt="github" className="w-1/2 h-1/2 object-contain" />
+            </div>
+          )}
+
+          {/* Live Demo Button */}
+          {live_link && (
+            <div
+              onClick={() => window.open(live_link, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+            >
+              <img src={livelink} alt="live demo" className="w-1/2 h-1/2 object-contain" />
+            </div>
+          )}
+        </div>
+
+          
           
         </div>
+        
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
@@ -71,7 +89,8 @@ const projectsText = {
       description:
         "Developed my personal portfolio website to showcase my skills, projects, and professional experience. Built with React, Tailwind CSS, and modern web development practices, focusing on responsive design and interactive UI elements.",
       image: portfolio,
-      source_code_link: "#",
+      source_code_link: "https://github.com/chorfichaymaa101/personal-portfolio-three",
+      live_link: "https://chaymaachorfi.netlify.app/",
       tags: [
         { name: "react", color: "blue-text-gradient" },
         { name: "three js", color: "green-text-gradient" },
@@ -84,6 +103,7 @@ const projectsText = {
         "Built a modern bookstore app using React and Tailwind CSS. Users can browse books by category, add them to a cart, and complete checkout with a delivery form for shipping details. The design is clean, responsive, and offers smooth navigation for a better experience.",
       image: bookstore,
       source_code_link: "https://github.com/chorfichaymaa101/bookstore",
+      live_link: "https://readorastore.netlify.app/",
       tags: [
         { name: "react", color: "blue-text-gradient" },
         { name: "tailwind css", color: "pink-text-gradient" },
@@ -98,7 +118,8 @@ const projectsText = {
       description:
         "Développement de mon portfolio personnel pour présenter mes compétences, projets et expériences professionnelles. Réalisé avec React et Tailwind CSS, en mettant l’accent sur le design responsive et les éléments interactifs.",
       image: portfolio,
-      source_code_link: "#",
+      source_code_link: "https://github.com/chorfichaymaa101/personal-portfolio-three",
+      live_link: "https://chaymaachorfi.netlify.app/",
       tags: [
         { name: "react", color: "blue-text-gradient" },
         { name: "three js", color: "green-text-gradient" },
@@ -111,6 +132,7 @@ const projectsText = {
         "Application de librairie moderne créée avec React et Tailwind CSS. Les utilisateurs peuvent parcourir les livres par catégories, les ajouter au panier et valider leur commande via un formulaire de livraison. L’interface est claire, responsive et simple à naviguer pour une expérience fluide.",
       image: bookstore,
       source_code_link: "https://github.com/chorfichaymaa101/bookstore",
+      live_link: "https://readorastore.netlify.app/",
       tags: [
         { name: "react", color: "blue-text-gradient" },
         { name: "tailwind css", color: "pink-text-gradient" },
