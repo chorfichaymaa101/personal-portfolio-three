@@ -10,6 +10,7 @@ import bookstore from '../assets/bookstore.png';
 import { jobit, portfolio} from "../assets";
 import { Tilt } from "react-tilt";
 import livelink from "../assets/link.png";
+import pharmacy from "../assets/pharmacy.png";
 
 const ProjectCard = ({index, name, description, tags, image, source_code_link, live_link}) => {
    return (
@@ -110,6 +111,20 @@ const projectsText = {
         { name: "react router", color: "green-text-gradient" },
       ],
     },
+      {
+        name: "Pharmacy Management App",
+        description:
+          "A responsive pharmacy stock management app built with React and Tailwind CSS. Manage medicines, stock, suppliers, orders, sales, reports, alerts, activity log, and settings with intuitive forms and mock data.",
+        image: pharmacy,
+        source_code_link: "https://github.com/chorfichaymaa101/Pharmacy-Stock-Management",
+        live_link: "https://pharmstock.netlify.app/",
+        tags: [
+          { name: "react", color: "blue-text-gradient" },
+          { name: "tailwind css", color: "pink-text-gradient" },
+          { name: "react router", color: "green-text-gradient" },
+        ],
+      }
+
   ],
 
   fr: [
@@ -139,6 +154,20 @@ const projectsText = {
         { name: "react router", color: "green-text-gradient" },
       ],
     },
+      {
+      name: "Application de Gestion de Pharmacie",
+      description:
+        "Application responsive de gestion de stock de pharmacie avec React et Tailwind CSS. Gère les médicaments, le stock, fournisseurs, commandes, ventes, rapports, alertes, journal d'activité et paramètres avec formulaires intuitifs et données fictives.",
+      image: pharmacy,
+      source_code_link: "https://github.com/chorfichaymaa101/Pharmacy-Stock-Management",
+      live_link: "https://pharmstock.netlify.app/",
+      tags: [
+        { name: "react", color: "blue-text-gradient" },
+        { name: "tailwind css", color: "pink-text-gradient" },
+        { name: "react router", color: "green-text-gradient" },
+      ],
+    }
+
   ],
 };
 
